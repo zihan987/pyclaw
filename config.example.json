@@ -1,0 +1,80 @@
+{
+  "runtime": {
+    "type": "openai",
+    "apiKey": "",
+    "baseUrl": "",
+    "requestTimeout": 30
+  },
+  "core": {
+    "workspace": "",
+    "model": "gpt-4o-mini",
+    "maxTokens": 1024,
+    "temperature": 0.7,
+    "maxConcurrency": 4,
+    "maxToolIterations": 8
+  },
+  "actions": {
+    "execTimeout": 60,
+    "restrictToWorkspace": true
+  },
+  "callbacks": {
+    "preToolUse": [],
+    "postToolUse": [],
+    "stop": []
+  },
+  "skills": {
+    "enabled": true,
+    "dir": ""
+  },
+  "adapters": {
+    "telegram": {
+      "enabled": false,
+      "token": "",
+      "allowFrom": []
+    },
+    "feishu": {
+      "enabled": false,
+      "appId": "",
+      "appSecret": "",
+      "verificationToken": "",
+      "port": 9876,
+      "allowFrom": []
+    },
+    "slack": {
+      "enabled": false,
+      "botToken": "",
+      "signingSecret": "",
+      "port": 3000,
+      "allowFrom": []
+    },
+    "webui": {
+      "enabled": false,
+      "port": 18790,
+      "allowFrom": []
+    }
+  },
+  "server": {
+    "host": "0.0.0.0",
+    "port": 18790
+  },
+  "mcp": {
+    "servers": [
+      {
+        "name": "example",
+        "command": "node",
+        "args": ["/path/to/mcp-server.js"],
+        "env": {},
+        "cwd": ""
+      }
+    ]
+  },
+  "trim": {
+    "enabled": true,
+    "threshold": 0.8,
+    "preserveCount": 5
+  },
+  "usage": {
+    "enabled": false,
+    "path": "~/.ember/usage.jsonl"
+  }
+}

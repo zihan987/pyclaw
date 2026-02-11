@@ -1,0 +1,9 @@
+[project]
+name = "pyclaw"
+version = "0.1.0"
+description = "Python version inspired by myclaw"
+requires-python = ">=3.9"
+readme = "README.md"
+
+[tool.setuptools]
+packages = ["pyclaw", "pyclaw.channels", "pyclaw.tools"]
