@@ -68,6 +68,8 @@ class LocalTools:
         if name == "write_file":
             path = self._resolve_path(args.get("path", ""))
             content = args.get("content", "")
+            if content == "":
+                return "error: empty content for write_file"
             path.parent.mkdir(parents=True, exist_ok=True)
             path.write_text(content, encoding="utf-8")
             return "ok"
